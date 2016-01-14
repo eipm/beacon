@@ -1,5 +1,5 @@
 # Beacon
-Dockerized version of a GA4GH Beacon implementation
+Dockerized GA4GH Beacon
 
 #### Instructions
 
@@ -12,3 +12,5 @@ docker run -d --name beacon -p 8080:80 elementolab/beacon
 ```
 docker run -d --name beacon -v /my/database/path/beaconData.GRCh37.sqlite:/var/www/html/beacon/ucscBeacon/beaconData.GRCh37.sqlite -v /my/beacon/conf/beacon.conf:/var/www/html/beacon/beacon.conf -p 8080:80 elementolab/beacon
 ```
+
+More Instructions coming soon...
