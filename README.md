@@ -81,5 +81,3 @@ cd /var/www/html/beacon/ucscBeacon/; ./query GRCh37 ipm /data/*;
 ```
 
 ### [Learn more about supported data formats](https://github.com/maximilianh/ucscBeacon#adding-your-own-data)
-
-
