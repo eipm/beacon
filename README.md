@@ -7,8 +7,6 @@ This project is an open source dockerized automated build implementation of the 
 [Github Project](https://github.com/ElementoLab/beacon)  
 [Docker Automated Build](https://hub.docker.com/r/elementolab/beacon/)
 
-[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
-
 ## What is Beacon?
 
 The Beacon Project is a simple, open web service that balances the desire of international sites to share genomic data with the need for data protection. Beacons can be implemented by any institution and enable users to determine whether a database contains a genetic variant of interest. Queries such as, "Do you have any genomes with an 'A' at position 100,735 on chromosome 3" (or similar data) are met with either "Yes" or "No.” The Beacon Network — the collection of all organizations that have “lit" beacons — can be queried using the Beacon API or a web-based search engine to determine which, if any, sites have a variant of interest.
