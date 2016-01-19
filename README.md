@@ -35,9 +35,9 @@ Docker is an open-source project that automates the deployment of applications i
 
 1. [Install Docker](https://www.docker.com)
 2. Launch Docker Quickstart terminal and type:  
-**```
+```
 docker run -d --name beacon -p 8080:80 elementolab/beacon
-```**
+```
 3. Browse to ```http:// <docker_ip>:<port_specified>/beacon``` on a modern web browser.
 
 [How do I get my docker ip?](https://docs.docker.com/machine/reference/ip/)  
