@@ -41,14 +41,14 @@ docker run -d --name beacon -p 8080:80 elementolab/beacon
 3. Browse to ```http:// <docker_ip>:<port_specified>/beacon``` on a modern web browser.
 
 [How do I get my docker ip?](https://docs.docker.com/machine/reference/ip/)  
-**```
+```
 docker-machine ip default
-```**
+```
 
-######Example  
-**```
+###### Example  
+```
 http://192.168.99.100:8080/beacon
-```**
+```
 
 ## Creating your own configuration file
 
