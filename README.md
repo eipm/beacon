@@ -35,17 +35,23 @@ Docker is an open-source project that automates the deployment of applications i
 
 1. [Install Docker](https://www.docker.com)
 2. Launch Docker Quickstart terminal and type:  
-```
-docker run -d --name beacon -p 8080:80 elementolab/beacon
+
+```bash
+docker run -d --name "beacon" \
+	--restart=always
+	-p 8080:80 \
+	elementolab/beacon
 ```
 3. Browse to ```http:// <docker_ip>:<port_specified>/beacon``` on a modern web browser.
 
 [How do I get my docker ip?](https://docs.docker.com/machine/reference/ip/)  
-```
+
+```bash
 docker-machine ip default
 ```
 
 ###### Example  
+
 ```
 http://192.168.99.100:8080/beacon
 ```
@@ -58,25 +64,29 @@ Create your own beacon.conf file using [this template](https://github.com/Elemen
 
 ### 1. Run a beacon with your own SQLite DB and configuration file.
 
-```
-docker run -d --name beacon \  
--v my/database/path/beaconData.GRCh37.sqlite:/var/www/html/beacon/ucscBeacon/beaconData.GRCh37.sqlite \  
--v /my/beacon/conf/beacon.conf:/var/www/html/beacon/beacon.conf \  
--p 8080:80 elementolab/beacon
+```bash
+docker run -d --name "beacon" \
+	--restart=always
+	-p 8080:80 \
+	-v my/database/path/beaconData.GRCh37.sqlite:/var/www/html/beacon/ucscBeacon/beaconData.GRCh37.sqlite \
+	-v /my/beacon/conf/beacon.conf:/var/www/html/beacon/beacon.conf \
+	elementolab/beacon
 ```
 
 ### 2. Run a beacon in interactive mode and import your own data and configuration file.
 
 A. Launch Beacon with your data  
-```
-docker run -it --name beacon \  
--v my/data/:/data \  
--v /my/beacon/conf/beacon.conf:/var/www/html/beacon/beacon.conf \  
--p 8080:80 elementolab/beacon /bin/bash
+
+```bash
+docker run -it --name beacon \
+	-v my/data/:/data \
+	-v /my/beacon/conf/beacon.conf:/var/www/html/beacon/beacon.conf \
+	-p 8080:80 elementolab/beacon /bin/bash
 ```
 
 B. Run the import dataset command for dataset 'ipm'  
-```
+
+```bash
 cd /var/www/html/beacon/ucscBeacon/; ./query GRCh37 ipm /data/*;
 ```
 
