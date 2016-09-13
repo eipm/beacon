@@ -2,7 +2,7 @@
 
 # Supported tags and respective `Dockerfile` links
 
--       [`1.1.0`, `latest` (*1.1.0/Dockerfile*)](https://github.com/ElementoLab/beacon/blob/master/Dockerfile)
+-       [`latest` (*latest/Dockerfile*)](https://github.com/ElementoLab/beacon/blob/master/Dockerfile)
 
 -       [`1.0.0` (*1.0.0/Dockerfile*)](https://github.com/ElementoLab/beacon/blob/1d12dba679b013b8f4a679f492d8f29906b7d678/Dockerfile)
 
