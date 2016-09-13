@@ -1,5 +1,5 @@
 # Dockerfile for Beacon
-FROM python:2.7
+FROM resin/raspberrypi3-python
 MAINTAINER Alexandros Sigaras <als2076@med.cornell.edu>
 #=====================#
 # Setup Prerequisites #
