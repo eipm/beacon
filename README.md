@@ -1,5 +1,11 @@
 # Beacon | Dockerized Automated Build Implementation
 
+# Supported tags and respective `Dockerfile` links
+
+-       [`1.1.0`, `latest` (*1.1.0/Dockerfile*)](https://github.com/ElementoLab/beacon/blob/master/Dockerfile)
+
+-       [`1.0.0` (*1.0.0/Dockerfile*)](https://github.com/ElementoLab/beacon/blob/1d12dba679b013b8f4a679f492d8f29906b7d678/Dockerfile)
+
 ## Introduction
 
 This project is an open source dockerized automated build implementation of the GA4GH Beacon, enabling researchers to light their own beacon with a single command line.
@@ -42,19 +48,7 @@ docker run -d --name "beacon" \
 	-p 8080:80 \
 	elementolab/beacon
 ```
-3. Browse to ```http:// <docker_ip>:<port_specified>/beacon``` on a modern web browser.
-
-[How do I get my docker ip?](https://docs.docker.com/machine/reference/ip/)  
-
-```bash
-docker-machine ip default
-```
-
-###### Example  
-
-```
-http://192.168.99.100:8080/beacon
-```
+3. Browse to ```http:// 0.0.0.0:8080/beacon``` on a modern web browser.
 
 ## Creating your own configuration file
 
