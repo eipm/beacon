@@ -9,7 +9,8 @@ RUN apt-get update \
 						git \
 						vim \
 	&& a2enmod cgi \
-	&& service apache2 restart
+	&& service apache2 restart \
+	&& rm -rf /var/lib/apt/lists/*
 #=====================#
 # Install Beacon 	  #
 #=====================#
