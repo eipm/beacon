@@ -1,9 +1,10 @@
-# Beacon | Dockerized Automated Build Implementation
+# Beacon
 
-# Supported tags and respective `Dockerfile` links
+[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/cbioportal/cbioportal/) [![Docker Pulls](https://img.shields.io/docker/pulls/elementolab/beacon.svg)](https://hub.docker.com/r/elementolab/beacon/) [![Docker Stars](https://img.shields.io/docker/stars/elementolab/beacon.svg)](https://hub.docker.com/r/elementolab/beacon/)
+
+## Supported tags and respective `Dockerfile` links
 
 -       [`latest` (*latest/Dockerfile*)](https://github.com/ElementoLab/beacon/blob/master/Dockerfile)
-
 -       [`1.0.0` (*1.0.0/Dockerfile*)](https://github.com/ElementoLab/beacon/blob/1d12dba679b013b8f4a679f492d8f29906b7d678/Dockerfile)
 
 ## Introduction
@@ -29,14 +30,6 @@ Docker is an open-source project that automates the deployment of applications i
 [Docker Home Page](https://www.docker.com)  
 [Docker Run Reference](https://docs.docker.com/engine/reference/run/)
 
-## Why a Docker Automated Build?
-
-#### Automated Builds have several advantages:
-
-- Images built in this way are built exactly as specified.
-- The Dockerfile is available to anyone with access to the Docker Hub repository.
-- The repository is kept up-to-date with code changes automatically.
-
 ## Launch a test Beacon
 
 1. [Install Docker](https://www.docker.com)
@@ -44,7 +37,7 @@ Docker is an open-source project that automates the deployment of applications i
 
 ```bash
 docker run -d --name "beacon" \
-	--restart=always
+	--restart=always \
 	-p 8080:80 \
 	elementolab/beacon
 ```
@@ -60,7 +53,7 @@ Create your own beacon.conf file using [this template](https://github.com/Elemen
 
 ```bash
 docker run -d --name "beacon" \
-	--restart=always
+	--restart=always \
 	-p 8080:80 \
 	-v my/database/path/beaconData.GRCh37.sqlite:/var/www/html/beacon/ucscBeacon/beaconData.GRCh37.sqlite \
 	-v /my/beacon/conf/beacon.conf:/var/www/html/beacon/beacon.conf \
@@ -69,7 +62,7 @@ docker run -d --name "beacon" \
 
 ### 2. Run a beacon in interactive mode and import your own data and configuration file.
 
-A. Launch Beacon with your data  
+#### A. Launch Beacon with your data  
 
 ```bash
 docker run -it --name beacon \
@@ -78,7 +71,7 @@ docker run -it --name beacon \
 	-p 8080:80 elementolab/beacon /bin/bash
 ```
 
-B. Run the import dataset command for dataset 'ipm'  
+#### B. Run the import dataset command for dataset 'ipm'  
 
 ```bash
 cd /var/www/html/beacon/ucscBeacon/; ./query GRCh37 ipm /data/*;
