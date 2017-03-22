@@ -1,6 +1,7 @@
 # Beacon
 
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/cbioportal/cbioportal/) [![Docker Pulls](https://img.shields.io/docker/pulls/elementolab/beacon.svg)](https://hub.docker.com/r/elementolab/beacon/) [![Docker Stars](https://img.shields.io/docker/stars/elementolab/beacon.svg)](https://hub.docker.com/r/elementolab/beacon/)
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 ## Supported tags and respective `Dockerfile` links
 
