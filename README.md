@@ -1,6 +1,7 @@
 # Beacon
 
 [![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/eipm/beacon/) [![Docker Pulls](https://img.shields.io/docker/pulls/eipm/beacon.svg)](https://hub.docker.com/r/elementolab/beacon/) [![Docker Stars](https://img.shields.io/docker/stars/eipm/beacon.svg)](https://hub.docker.com/r/eipm/beacon/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b3607af6a3051d8df2eb/maintainability)](https://codeclimate.com/github/eipm/beacon/maintainability)
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 ## Supported tags and respective `Dockerfile` links
