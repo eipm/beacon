@@ -1,5 +1,5 @@
 # Dockerfile for Beacon
-FROM python:2.7.14-stretch
+FROM python:2.7.16-stretch
 #=====================#
 # Setup Prerequisites #
 #=====================#
