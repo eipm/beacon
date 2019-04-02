@@ -1,12 +1,12 @@
 # Dockerfile for Beacon
-FROM python:2.7.14
+FROM python:2.7.16-stretch
 #=====================#
 # Setup Prerequisites #
 #=====================#
 RUN apt-get update && apt-get install -y \
-						apache2 \
-						git \
-						vim \
+		apache2 \
+		git \
+		vim \
 	&& a2enmod cgi \
 	&& service apache2 restart \
 	&& rm -rf /var/lib/apt/lists/*
@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y \
 # Docker Image Configuration	#
 #===============================#
 LABEL Description='Beacon' \
-		Vendor='Englander Institute for Precision Medicine' \
-		maintainer='als2076@med.cornell.edu'
+	Vendor='Englander Institute for Precision Medicine' \
+	maintainer='als2076@med.cornell.edu'
 #=====================#
 # Install Beacon 	  #
 #=====================#

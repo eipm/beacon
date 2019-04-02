@@ -1,6 +1,6 @@
 # Beacon
 
-[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/eipm/beacon/) [![Docker Pulls](https://img.shields.io/docker/pulls/eipm/beacon.svg)](https://hub.docker.com/r/elementolab/beacon/) [![Docker Stars](https://img.shields.io/docker/stars/eipm/beacon.svg)](https://hub.docker.com/r/eipm/beacon/)
+[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/eipm/beacon/) [![Docker Pulls](https://img.shields.io/docker/pulls/eipm/beacon.svg)](https://hub.docker.com/r/eipm/beacon/) [![Docker Stars](https://img.shields.io/docker/stars/eipm/beacon.svg)](https://hub.docker.com/r/eipm/beacon/)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b3607af6a3051d8df2eb/maintainability)](https://codeclimate.com/github/eipm/beacon/maintainability)
 [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
@@ -13,8 +13,8 @@
 
 This project is an open source dockerized automated build implementation of the GA4GH Beacon, enabling researchers to light their own beacon with a single command line.
 
-[Github Project](https://github.com/eipm/beacon)
-[Docker Automated Build](https://hub.docker.com/r/eipm/beacon/)
+- [Github Project](https://github.com/eipm/beacon)
+- [Docker Automated Build](https://hub.docker.com/r/eipm/beacon/)
 
 ## About Beacon
 
@@ -22,8 +22,8 @@ The Beacon Project is a simple, open web service that balances the desire of int
 
 ### Beacon Resources
 
-[Beacon Project Home Page](http://ga4gh.org/#/beacon)
-[Beacon on Github](https://github.com/maximilianh/ucscBeacon)
+- [Beacon Project Home Page](http://ga4gh.org/#/beacon)
+- [Beacon on Github](https://github.com/maximilianh/ucscBeacon)
 
 ## About Docker
 
@@ -31,8 +31,8 @@ Docker is an open-source project that automates the deployment of applications i
 
 ### Docker Resources
 
-[Docker Home Page](https://www.docker.com)
-[Docker Run Reference](https://docs.docker.com/engine/reference/run/)
+- [Docker Home Page](https://www.docker.com)
+- [Docker Run Reference](https://docs.docker.com/engine/reference/run/)
 
 ## Launch a test Beacon
 
@@ -41,7 +41,7 @@ Docker is an open-source project that automates the deployment of applications i
 
 ```bash
 docker run -d --name "beacon" \
---restart=always \
+--restart on-failure:5 \
 -p 8080:80 \
 eipm/beacon
 ```
@@ -50,22 +50,22 @@ eipm/beacon
 
 ## Creating your own configuration file
 
-Create your own beacon.conf file using [this template](https://github.com/ElementoLab/beacon/blob/master/config/beacon.conf).
+Create your own beacon.conf file using [this template](https://github.com/eipm/beacon/blob/master/config/beacon.conf).
 
 ## Adding your own data and configuration file
 
-### 1. Run a beacon with your own SQLite DB and configuration file.
+### 1. Run a beacon with your own SQLite DB and configuration file
 
 ```bash
 docker run -d --name "beacon" \
---restart=always \
+--restart on-failure:5 \
 -p 8080:80 \
 -v my/database/path/beaconData.GRCh37.sqlite:/var/www/html/beacon/ucscBeacon/beaconData.GRCh37.sqlite \
 -v /my/beacon/conf/beacon.conf:/var/www/html/beacon/beacon.conf \
 eipm/beacon
 ```
 
-### 2. Run a beacon in interactive mode and import your own data and configuration file.
+### 2. Run a beacon in interactive mode and import your own data and configuration file
 
 #### A. Launch Beacon with your data
 
@@ -73,7 +73,7 @@ eipm/beacon
 docker run -it --name beacon \
 -v my/data/:/data \
 -v /my/beacon/conf/beacon.conf:/var/www/html/beacon/beacon.conf \
--p 8080:80 elementolab/beacon /bin/bash
+-p 8080:80 eipm/beacon /bin/bash
 ```
 
 #### B. Run the import dataset command for dataset 'ipm'
