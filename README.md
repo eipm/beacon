@@ -41,7 +41,7 @@ Docker is an open-source project that automates the deployment of applications i
 
 ```bash
 docker run -d --name "beacon" \
---restart=always \
+--restart on-failure:5 \
 -p 8080:80 \
 eipm/beacon
 ```
@@ -54,18 +54,18 @@ Create your own beacon.conf file using [this template](https://github.com/eipm/b
 
 ## Adding your own data and configuration file
 
-### 1. Run a beacon with your own SQLite DB and configuration file.
+### 1. Run a beacon with your own SQLite DB and configuration file
 
 ```bash
 docker run -d --name "beacon" \
---restart=always \
+--restart on-failure:5 \
 -p 8080:80 \
 -v my/database/path/beaconData.GRCh37.sqlite:/var/www/html/beacon/ucscBeacon/beaconData.GRCh37.sqlite \
 -v /my/beacon/conf/beacon.conf:/var/www/html/beacon/beacon.conf \
 eipm/beacon
 ```
 
-### 2. Run a beacon in interactive mode and import your own data and configuration file.
+### 2. Run a beacon in interactive mode and import your own data and configuration file
 
 #### A. Launch Beacon with your data
 
