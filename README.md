@@ -1,20 +1,14 @@
 # Beacon
 
-[![Docker Automated build](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/eipm/beacon/) [![Docker Pulls](https://img.shields.io/docker/pulls/eipm/beacon.svg)](https://hub.docker.com/r/eipm/beacon/) [![Docker Stars](https://img.shields.io/docker/stars/eipm/beacon.svg)](https://hub.docker.com/r/eipm/beacon/)
-[![Maintainability](https://api.codeclimate.com/v1/badges/b3607af6a3051d8df2eb/maintainability)](https://codeclimate.com/github/eipm/beacon/maintainability)
-[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+[![Actions Status](https://github.com/eipm/beacon/workflows/Docker/badge.svg)](https://github.com/eipm/beacon/actions) [![Github](https://img.shields.io/badge/github-1.0.0-green?style=flat&logo=github)](https://github.com/eipm/beacon) [![EIPM Docker Hub](https://img.shields.io/badge/EIPM%20docker%20hub-1.0.0-blue?style=flat&logo=docker)](https://hub.docker.com/repository/docker/eipm/beacon) [![CGEN Docker Hub](https://img.shields.io/badge/CGEN%20docker%20hub-1.0.0-blue?style=flat&logo=docker)](https://hub.docker.com/repository/docker/cgen/beacon) [![GitHub Container Registry](https://img.shields.io/badge/GitHub%20Container%20Registry-1.0.0-blue?style=flat&logo=docker)](https://github.com/orgs/eipm/packages/container/package/beacon) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`latest` (*latest/Dockerfile*)](https://github.com/eipm/beacon/blob/master/Dockerfile)
-- [`1.0.0` (*1.0.0/Dockerfile*)](https://github.com/eipm/beacon/blob/1d12dba679b013b8f4a679f492d8f29906b7d678/Dockerfile)
+- [`latest` (*latest/Dockerfile*)](/Dockerfile)
 
 ## Introduction
 
 This project is an open source dockerized automated build implementation of the GA4GH Beacon, enabling researchers to light their own beacon with a single command line.
-
-- [Github Project](https://github.com/eipm/beacon)
-- [Docker Automated Build](https://hub.docker.com/r/eipm/beacon/)
 
 ## About Beacon
 

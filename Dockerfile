@@ -1,21 +1,23 @@
-# Dockerfile for Beacon
-FROM python:2.7.16-stretch
+FROM python:2.7.18-buster
 #=====================#
 # Setup Prerequisites #
 #=====================#
 RUN apt-get update && apt-get install -y \
-		apache2 \
-		git \
-		vim \
+	apache2 \
+	git \
+	vim \
 	&& a2enmod cgi \
 	&& service apache2 restart \
 	&& rm -rf /var/lib/apt/lists/*
 #===============================#
 # Docker Image Configuration	#
 #===============================#
-LABEL Description='Beacon' \
+LABEL org.opencontainers.image.source='https://github.com/eipm/beacon' \
+	Description='Beacon' \
 	Vendor='Englander Institute for Precision Medicine' \
-	maintainer='als2076@med.cornell.edu'
+	maintainer='als2076@med.cornell.edu' \
+	base_image='python' \
+	base_image_version='2.7.18-buster'
 #=====================#
 # Install Beacon 	  #
 #=====================#
