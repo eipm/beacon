@@ -1,5 +1,8 @@
 name: Docker
 
+permissions:
+  contents: read
+
 on:
   push:
     # Publish `main` as Docker `latest` image.
